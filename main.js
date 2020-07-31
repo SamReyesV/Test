@@ -1,31 +1,17 @@
-const nombre = document.getElementById("name")
-const email = document.getElementById("email")
-const es = document.getElementById("estado")
-const form = document.getElementById("form")
-const parrafo = document.getElementById("warnings")
-
-form.addEventListener("submit", e => {
-    e.preventDefault()
-    let warnings = ""
-    let entrar = false
-    let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/
-    parrafo.innerHTML = ""
-    if (nombre.value.length < 6) {
-        warnings += `El nombre no es valido <br>`
-        entrar = true
+function validarform() {
+    var n = document.forms["form"]["name"].value;
+    if (n == "") {
+        alert("Debes ingresar tu nombre");
+        return false;
     }
-    if (!regexEmail.test(email.value)) {
-        warnings += `El email no es valido <br>`
-        entrar = true
+    var e = document.forms["form"]["email"].value;
+    if (e == "") {
+        alert("Debes ingresar tu correo");
+        return false;
     }
-    if (es.value.length < 8) {
-        warnings += `El estado no es valida <br>`
-        entrar = true
+    var es = document.forms["form"]["estado"].value;
+    if (es == "") {
+        alert("Debes ingresar tu estado");
+        return false;
     }
-
-    if (entrar) {
-        parrafo.innerHTML = warnings
-    } else {
-        parrafo.innerHTML = "Enviado"
-    }
-})
+}

@@ -10,24 +10,23 @@
 </head>
 
 <body>
-    <form action="" method="POST" id="form">
+    <form action="control.php" method="post" name="form" id="form" onsubmit="return validarform()">
         <div class="form">
             <h1>Registro</h1>
             <div class="grupo">
-                <input type="text" name="" id="name" required><span class="barra"></span>
+                <input type="text" name="name" id="name"><span class="barra"></span>
                 <label for="">Nombre completo</label>
             </div>
             <div class="grupo">
-                <input type="email" name="" id="email" required><span class="barra"></span>
+                <input type="email" name="email" id="email"><span class="barra"></span>
                 <label for="">Email</label>
             </div>
             <div class="grupo">
-                <input type="text" name="" id="estado" required><span class="barra"></span>
+                <input type="text" name="estado" id="estado"><span class="barra"></span>
                 <label for="">Estado</label>
+                <button type="submit" name="registrarse">Suscribirte</button>
+                <a href="Dashboard.html">Ver registros anteriores</a>
             </div>
-            <button type="submit">Suscribirte</button>
-            <p class="warnings" id="warnings"></p>
-        </div>
     </form>
 
     <script src="main.js"></script>

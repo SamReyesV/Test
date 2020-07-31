@@ -1,0 +1,24 @@
+    body {
+        background-image: url(img/Fondo.jpg);
+    }
+    
+    form {
+        text-align: center;
+    }
+    
+    h1 {
+        text-align: center;
+    }
+    
+    input {
+        margin: 1rem;
+        padding: 1rem;
+        border: none;
+        background-color: #FFE7FF;
+    }
+    
+    .container-fluid {
+        background-image: url(img/Fondo2.JPG);
+        margin: 7rem;
+        padding: 10rem;
+    }
